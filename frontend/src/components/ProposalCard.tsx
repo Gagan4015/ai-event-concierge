@@ -65,7 +65,7 @@ export default function ProposalCard({ event, isNew, onDelete, compact }: Propos
                 </span>
               )}
             </div>
-            <p className="text-sm text-gray-400 line-clamp-2 italic">"{event.userQuery}"</p>
+            <p className="text-sm text-gray-400 line-clamp-2 italic">{event.userQuery}</p>
           </div>
 
           <div className="flex items-center gap-1 shrink-0">
