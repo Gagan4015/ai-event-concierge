@@ -9,7 +9,7 @@ interface BackendLoadingScreenProps {
 }
 
 export default function BackendLoadingScreen({ isVisible, onBackendReady }: BackendLoadingScreenProps) {
-  const [checkAttempts, setCheckAttempts] = useState(0);
+  // const [checkAttempts, setCheckAttempts] = useState(0);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -35,7 +35,7 @@ export default function BackendLoadingScreen({ isVisible, onBackendReady }: Back
         // Backend not ready yet
       }
 
-      setCheckAttempts((prev) => prev + 1);
+      // setCheckAttempts((prev) => prev + 1);
     };
 
     // Check immediately
@@ -64,8 +64,9 @@ export default function BackendLoadingScreen({ isVisible, onBackendReady }: Back
         <div className="space-y-2">
           <h1 className="text-3xl font-bold text-white">EventIQ</h1>
           <p className="text-gray-400 text-lg">Waking up your AI concierge...</p>
-          <p className="text-gray-500 text-sm">
-            {checkAttempts > 0 && `Attempt ${checkAttempts}`}
+          <p className="text-white text-sm pt-2">
+           Server Waking up Please Wait 30-40 seconds
+            {/* {checkAttempts > 0 && `Attempt ${checkAttempts}`} */}
           </p>
         </div>
 
